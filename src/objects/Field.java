@@ -48,7 +48,8 @@ public class Field implements Serializable {
 		tiles[rowCount - 1][columnCount - 1].setState(Tile.State.OPEN);
 		emptyposition = new Position(rowCount - 1, columnCount - 1);
 		int previousMovement = 5;
-		for (int i = 0; i < 100; i++) {
+		int numberOfGenerating=rowCount*columnCount*10;
+		for (int i = 0; i < numberOfGenerating; i++) {
 			int movement = ran.nextInt(4);
 			switch (movement) {
 			case 0:
